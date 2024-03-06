@@ -52,7 +52,7 @@ public class Login_page {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Dean Alemao\\Downloads\\medicine-symbol.png"));
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\medicine-symbol.png"));
 		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.getContentPane().setLayout(null);
 		
@@ -80,8 +80,8 @@ public class Login_page {
 		password.setBounds(282, 306, 153, 26);
 		frame.getContentPane().add(password);
 		
-		JButton loginbut = new JButton("Login");
-		loginbut.addActionListener(new ActionListener() {
+		JButton btnNewButton = new JButton("Login");
+		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String user=username.getText();
 				String pass=password.getText();
@@ -95,12 +95,13 @@ public class Login_page {
 				}
 			}
 		});
-		loginbut.setBackground(new Color(192, 192, 192));
-		loginbut.setBounds(233, 372, 89, 23);
-		frame.getContentPane().add(loginbut);
+		btnNewButton.setBackground(new Color(192, 192, 192));
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton.setBounds(233, 382, 109, 33);
+		frame.getContentPane().add(btnNewButton);
 		
 		lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\login.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\login.jpeg"));
 		lblNewLabel_2.setBounds(0, 0, 588, 440);
 		frame.getContentPane().add(lblNewLabel_2);
 		frame.setBounds(100, 100, 600, 475);
