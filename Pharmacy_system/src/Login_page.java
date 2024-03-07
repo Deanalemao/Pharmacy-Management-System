@@ -96,7 +96,7 @@ public class Login_page {
 			}
 		});
 		btnNewButton.setBackground(new Color(192, 192, 192));
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 17));
 		btnNewButton.setBounds(233, 382, 109, 33);
 		frame.getContentPane().add(btnNewButton);
 		

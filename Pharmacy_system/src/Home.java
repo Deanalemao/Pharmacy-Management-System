@@ -70,17 +70,32 @@ public class Home extends JFrame {
 		btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\women.jpg"));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Womencare frame = new Womencare();
+				frame.setVisible(true);
 			}
 		});
 		btnNewButton_1.setBounds(168, 186, 130, 210);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_1_1 = new JButton("");
+		btnNewButton_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Medicine frame = new Medicine();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_1_1.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\medicine.jpg"));
 		btnNewButton_1_1.setBounds(308, 186, 130, 210);
 		contentPane.add(btnNewButton_1_1);
 		
 		JButton btnNewButton_1_1_1 = new JButton("");
+		btnNewButton_1_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Other frame = new Other();
+				frame.setVisible(true);
+				
+			}
+		});
 		btnNewButton_1_1_1.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\other.jpg"));
 		btnNewButton_1_1_1.setBounds(448, 186, 130, 210);
 		contentPane.add(btnNewButton_1_1_1);
@@ -97,12 +112,12 @@ public class Home extends JFrame {
 		
 		JLabel lblNewLabel_2_1_1 = new JLabel("Medicine");
 		lblNewLabel_2_1_1.setFont(new Font("Sylfaen", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_2_1_1.setBounds(318, 407, 120, 39);
+		lblNewLabel_2_1_1.setBounds(328, 407, 120, 39);
 		contentPane.add(lblNewLabel_2_1_1);
 		
 		JLabel lblNewLabel_2_1_1_1 = new JLabel("Other");
 		lblNewLabel_2_1_1_1.setFont(new Font("Sylfaen", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_2_1_1_1.setBounds(458, 407, 120, 39);
+		lblNewLabel_2_1_1_1.setBounds(468, 407, 120, 39);
 		contentPane.add(lblNewLabel_2_1_1_1);
 		
 		JLabel lblNewLabel = new JLabel("New label");
