@@ -24,6 +24,7 @@ public class Babycare extends JFrame {
 	private JTextField btf4;
 	private JTextField btf5;
 	private JTextField btf6;
+	private JTextField babytotal;
 
 	/**
 	 * Launch the application.
@@ -54,60 +55,99 @@ public class Babycare extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton babyTohome = new JButton("Back");
-		babyTohome.setFont(new Font("Tahoma", Font.BOLD, 12));
-		babyTohome.setBackground(new Color(236, 213, 235));
-		babyTohome.addActionListener(new ActionListener() {
+		JButton babytobill = new JButton("Confirm");
+		babytobill.setFont(new Font("Tahoma", Font.BOLD, 12));
+		babytobill.setBackground(new Color(236, 213, 235));
+		babytobill.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				Home frame = new Home();
 				frame.setVisible(true);
 			}
 		});
-		babyTohome.setBounds(33, 391, 89, 23);
-		contentPane.add(babyTohome);
+		babytobill.setBounds(33, 391, 89, 23);
+		contentPane.add(babytobill);
 		
 		JCheckBox bc1 = new JCheckBox("Diapers @10");
-		bc1.setBounds(33, 191, 111, 23);
+		bc1.setBackground(new Color(232, 223, 232));
+		bc1.setForeground(new Color(0, 0, 0));
+		bc1.setBounds(6, 191, 138, 23);
 		contentPane.add(bc1);
 		
 		JCheckBox bc2 = new JCheckBox("Baby wipe @20");
-		bc2.setBounds(33, 257, 111, 23);
+		bc2.setBackground(new Color(232, 223, 232));
+		bc2.setForeground(new Color(0, 0, 0));
+		bc2.setBounds(6, 257, 138, 23);
 		contentPane.add(bc2);
 		
 		JCheckBox bc3 = new JCheckBox("Rash cream @30");
-		bc3.setBounds(33, 320, 111, 23);
+		bc3.setBackground(new Color(232, 223, 232));
+		bc3.setForeground(new Color(0, 0, 0));
+		bc3.setBounds(6, 320, 138, 23);
 		contentPane.add(bc3);
 		
 		JCheckBox bc4 = new JCheckBox("Shampoo @60");
-		bc4.setBounds(317, 191, 111, 23);
+		bc4.setBackground(new Color(232, 223, 232));
+		bc4.setForeground(new Color(0, 0, 0));
+		bc4.setBounds(297, 191, 131, 23);
 		contentPane.add(bc4);
 		
 		JCheckBox bc5 = new JCheckBox("Lotion @35");
-		bc5.setBounds(317, 257, 111, 23);
+		bc5.setBackground(new Color(232, 223, 232));
+		bc5.setForeground(new Color(0, 0, 0));
+		bc5.setBounds(297, 257, 131, 23);
 		contentPane.add(bc5);
 		
 		JCheckBox bc6 = new JCheckBox("Finger toothbrush @20");
-		bc6.setBounds(317, 320, 144, 23);
+		bc6.setBackground(new Color(232, 223, 232));
+		bc6.setForeground(new Color(0, 0, 0));
+		bc6.setBounds(297, 320, 164, 23);
 		contentPane.add(bc6);
 		
 		JButton addbaby = new JButton("Add");
 		addbaby.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int totalbaby=0,a=0;
+				int totalbaby=0,a=0,b=0,c=0,d=0,f=0,g=0;
 				
 				if(bc1.isSelected()) {
 					
-					totalbaby=Integer.parseInt(btf1.getText());
-					a=10*totalbaby;
-					
-					
+					a=Integer.parseInt(btf1.getText());
+					totalbaby=10*a;
 				}
+				if(bc2.isSelected()) {
+					
+					b=Integer.parseInt(btf2.getText());
+					totalbaby=20*b+totalbaby;
+				}
+				if(bc3.isSelected()) {
+					
+					c=Integer.parseInt(btf3.getText());
+					totalbaby=30*c+totalbaby;
+				}
+				if(bc4.isSelected()) {
+					
+					d=Integer.parseInt(btf4.getText());
+					totalbaby=60*d+totalbaby;
+				}
+				if(bc5.isSelected()) {
+					
+					f=Integer.parseInt(btf5.getText());
+					totalbaby=35*f+totalbaby;
+				}
+				if(bc6.isSelected()) {
+					
+					f=Integer.parseInt(btf6.getText());
+					totalbaby=20*f+totalbaby;
+				}
+				
+				
+				babytotal.setText(" "+totalbaby);
+				
 			}
 		});
 		addbaby.setFont(new Font("Tahoma", Font.BOLD, 12));
 		addbaby.setBackground(new Color(236, 213, 235));
-		addbaby.setBounds(182, 392, 89, 23);
+		addbaby.setBounds(387, 406, 89, 23);
 		contentPane.add(addbaby);
 		
 		btf1 = new JTextField();
@@ -139,6 +179,17 @@ public class Babycare extends JFrame {
 		btf5.setColumns(10);
 		btf5.setBounds(467, 258, 96, 20);
 		contentPane.add(btf5);
+		
+		babytotal = new JTextField();
+		babytotal.setBounds(356, 368, 144, 37);
+		contentPane.add(babytotal);
+		babytotal.setColumns(10);
+		
+		JButton babytowomen = new JButton("Next");
+		babytowomen.setFont(new Font("Tahoma", Font.BOLD, 12));
+		babytowomen.setBackground(new Color(236, 213, 235));
+		babytowomen.setBounds(164, 392, 89, 23);
+		contentPane.add(babytowomen);
 		
 		JLabel babyframe = new JLabel("New label");
 		babyframe.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\Baby care frame.jpg"));

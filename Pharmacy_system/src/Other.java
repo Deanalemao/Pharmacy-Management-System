@@ -11,11 +11,19 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JCheckBox;
 
 public class Other extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JTextField OF1;
+	private JTextField OF2;
+	private JTextField OF3;
+	private JTextField OF6;
+	private JTextField OF5;
+	private JTextField OF4;
 
 	/**
 	 * Launch the application.
@@ -56,6 +64,64 @@ public class Other extends JFrame {
 				frame.setVisible(true);
 			}
 		});
+		
+		JButton btnNewButton = new JButton("ADD");
+		btnNewButton.setBounds(299, 395, 85, 21);
+		contentPane.add(btnNewButton);
+		
+		OF4 = new JTextField();
+		OF4.setBounds(441, 211, 96, 19);
+		contentPane.add(OF4);
+		OF4.setColumns(10);
+		
+		OF5 = new JTextField();
+		OF5.setBounds(441, 269, 96, 19);
+		contentPane.add(OF5);
+		OF5.setColumns(10);
+		
+		OF6 = new JTextField();
+		OF6.setBounds(441, 323, 96, 19);
+		contentPane.add(OF6);
+		OF6.setColumns(10);
+		
+		OF3 = new JTextField();
+		OF3.setBounds(156, 323, 96, 19);
+		contentPane.add(OF3);
+		OF3.setColumns(10);
+		
+		OF2 = new JTextField();
+		OF2.setBounds(156, 269, 96, 19);
+		contentPane.add(OF2);
+		OF2.setColumns(10);
+		
+		OF1 = new JTextField();
+		OF1.setBounds(156, 211, 96, 19);
+		contentPane.add(OF1);
+		OF1.setColumns(10);
+		
+		JCheckBox OC6 = new JCheckBox("Fashwash@150");
+		OC6.setBounds(299, 322, 111, 21);
+		contentPane.add(OC6);
+		
+		JCheckBox OC5 = new JCheckBox("Eyedrops@50");
+		OC5.setBounds(299, 268, 111, 21);
+		contentPane.add(OC5);
+		
+		JCheckBox OC4 = new JCheckBox("Condom@20");
+		OC4.setBounds(299, 210, 111, 21);
+		contentPane.add(OC4);
+		
+		JCheckBox OC3 = new JCheckBox("Pills@200");
+		OC3.setBounds(25, 322, 93, 21);
+		contentPane.add(OC3);
+		
+		JCheckBox OC2 = new JCheckBox("Band-aids@5");
+		OC2.setBounds(25, 268, 93, 21);
+		contentPane.add(OC2);
+		
+		JCheckBox OC1 = new JCheckBox("Lizol@99");
+		OC1.setBounds(25, 210, 93, 21);
+		contentPane.add(OC1);
 		othetTohome.setBounds(10, 393, 89, 23);
 		contentPane.add(othetTohome);
 		
