@@ -60,7 +60,7 @@ public class Other extends JFrame {
 		contentPane.add(othetTohome);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\other.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\other frame.png"));
 		lblNewLabel.setBounds(0, 0, 588, 440);
 		contentPane.add(lblNewLabel);
 	}
