@@ -56,8 +56,10 @@ public class Home extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				Babycare frame= new Babycare();
-				frame.setVisible(true);
+				Babycare frameBaby= new Babycare();
+				frameBaby.setVisible(true);
+				dispose();
+				
 					
 				
 			}
@@ -70,8 +72,10 @@ public class Home extends JFrame {
 		btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\women.jpg"));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Womencare frame = new Womencare();
+				int totalbaby=0;
+				Womencare frame = new Womencare(totalbaby);
 				frame.setVisible(true);
+				dispose();
 			}
 		});
 		btnNewButton_1.setBounds(168, 186, 130, 210);
@@ -80,8 +84,11 @@ public class Home extends JFrame {
 		JButton btnNewButton_1_1 = new JButton("");
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Medicine frame = new Medicine();
+				
+				int totalbaby=0,totalwomen=0;
+				Medicine frame = new Medicine(totalbaby,totalwomen);
 				frame.setVisible(true);
+				dispose();
 			}
 		});
 		btnNewButton_1_1.setIcon(new ImageIcon("C:\\Users\\Dean Alemao\\eclipse-workspace\\Pharmacy Management System\\Pharmacy_system\\images\\medicine.jpg"));
@@ -91,8 +98,11 @@ public class Home extends JFrame {
 		JButton btnNewButton_1_1_1 = new JButton("");
 		btnNewButton_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Other frame = new Other();
+				
+				int totalbaby=0,totalwomen=0,totalother=0;
+				Other frame = new Other(totalbaby,totalwomen,totalother);
 				frame.setVisible(true);
+				dispose();
 				
 			}
 		});
